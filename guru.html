@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guru - SMPN 3 Pasarkemis</title>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    rel="stylesheet"
+  />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Base resets and fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&family=Segoe+UI&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #F8F7F4;
+      color: #000;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+    }
+
+    /* COLOR VARIABLES */
+    :root {
+      --blue: #1a60d6;
+      --dark-blue: #0d3bb3;
+      --yellow: #f7d503;
+      --purple: #5e3bff;
+      --black: #000;
+      --white: #F8F7F4;
+      --red: #b7282b;
+      --light-gray: #f9f9f9;
+      --gray-text: #666;
+    }
+
+    /* HEADER */
+    header {
+      background: var(--white);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 32px;
+      border-bottom: 1px solid #eee;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      font-size: 14px;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logosmp {
+      background: var(--white);
+      height: 70px;
+    }
+
+    .logo-text {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 20px;
+      color: var(--black);
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      font-weight: 600;
+    }
+
+    nav a {
+      padding: 8px 16px;
+      border-radius: 16px;
+      color: var(--black);
+      transition: background-color 0.3s, color 0.3s;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+    }
+
+    nav a.active,
+    nav a:hover {
+      background-color: var(--black);
+      color: var(--white);
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo-container">
+      <img class="logosmp" src="logosmp.png">
+      <a href="index.html" class="logo-text">SMPN 3 Pasarkemis</a>
+    </div>
+    <nav>
+      <a href="visimisi.html">Visi & Misi</a>
+      <a href="sejarah.html">Sejarah</a>
+      <a href="eks.html">Ekstrakurikuler</a>
+      <a href="prestasi.html">Prestasi</a>
+      <a href="guru.html">Guru</a>
+    </nav>
+  </header>
+
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Guru</title>
+    <style>
+        /* General Setup and Variables */
+        :root {
+            --primary-dark: #2c5282; /* Adjusted from Tailwind 'text-primary-dark' for a typical dark blue */
+            --gray-600: #4b5563;
+            --gray-200: #e5e7eb;
+            --white: #F8F7F4;
+        }
+
+        /* Equivalent to max-w-7xl mx-auto p-4 sm:p-8 lg:p-12 */
+        .container-wrapper {
+            max-width: 1280px; /* Equivalent to max-w-7xl */
+            margin-left: auto;
+            margin-right: auto;
+            padding: 1rem; /* p-4 */
+        }
+        @media (min-width: 640px) { /* sm */
+            .container-wrapper {
+                padding: 2rem; /* sm:p-8 */
+            }
+        }
+        @media (min-width: 1024px) { /* lg */
+            .container-wrapper {
+                padding: 3rem; /* lg:p-12 */
+            }
+        }
+
+        /* Equivalent to text-3xl font-bold mb-8 text-primary-dark */
+        .page-title {
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 700; /* font-bold */
+            margin-bottom: 2rem; /* mb-8 */
+            color: var(--primary-dark);
+        }
+
+        /* Grid Layout (Responsive) */
+        /* grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-10 */
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr)); /* grid-cols-2 */
+            gap: 1.5rem; /* gap-6 */
+        }
+        @media (min-width: 640px) { /* sm */
+            .staff-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr)); /* sm:grid-cols-3 */
+                gap: 2rem; /* sm:gap-8 */
+            }
+        }
+        @media (min-width: 768px) { /* md */
+            .staff-grid {
+                grid-template-columns: repeat(4, minmax(0, 1fr)); /* md:grid-cols-4 */
+            }
+        }
+        @media (min-width: 1024px) { /* lg */
+            .staff-grid {
+                grid-template-columns: repeat(5, minmax(0, 1fr)); /* lg:grid-cols-5 */
+                gap: 2.5rem; /* lg:gap-10 */
+            }
+        }
+
+        /* Profile Card Styling */
+        /* profile-card p-2 rounded-lg shadow-sm */
+        .profile-card {
+            padding: 0.5rem; /* p-2 */
+            border-radius: 0.5rem; /* rounded-lg */
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
+            background-color: var(--white);
+        }
+
+        /* Image Container */
+        /* w-full mb-3 overflow-hidden */
+        .image-container {
+            width: 100%;
+            margin-bottom: 0.75rem; /* mb-3 */
+            overflow: hidden;
+        }
+
+        /* Image Element */
+        /* w-full h-auto object-cover aspect-[4/5] rounded-sm transition duration-300 transform hover:scale-[1.03] */
+        .profile-image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            /* Aspect ratio 4/5 */
+            aspect-ratio: 4 / 5;
+            border-radius: 0.125rem; /* rounded-sm */
+            transition: transform 300ms ease-in-out; /* transition duration-300 transform */
+        }
+
+        /* Hover effect */
+        .profile-card:hover .profile-image {
+            transform: scale(1.03); /* hover:scale-[1.03] */
+        }
+        
+        /* Image Error Placeholder - basic styling */
+        .image-fail {
+            aspect-ratio: 4 / 5;
+            background-color: var(--gray-200);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.875rem; /* text-sm */
+            color: var(--gray-600);
+            border-radius: 0.125rem;
+        }
+
+
+        /* Name/Title Block */
+        /* text-xs font-bold uppercase tracking-wider text-primary-dark mb-1 */
+        .name-block {
+            font-size: 0.75rem; /* text-xs */
+            font-weight: 700; /* font-bold */
+            text-transform: uppercase; /* uppercase */
+            letter-spacing: 0.05em; /* tracking-wider */
+            color: var(--primary-dark);
+            margin-bottom: 0.25rem; /* mb-1 */
+        }
+
+        /* Description Block */
+        /* text-[10px] text-gray-600 leading-tight */
+        .desc-block {
+            font-size: 10px; /* text-[10px] */
+            color: var(--gray-600);
+            line-height: 1.25; /* leading-tight */
+        }
+
+        /* Department Label */
+        /* font-semibold */
+        .desc-block .label {
+            font-weight: 600; /* font-semibold */
+        }
+
+            /* Footer bar */
+    footer {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+
+    .footer-content {
+      text-align: center;
+      padding: 36px 20px 24px;
+      background-color: #F8F7F4;
+      color: #222;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .footer-logo {
+      font-weight: 700;
+      font-size: 32px;
+      color: var(--blue);
+      margin-bottom: 18px;
+      letter-spacing: 1px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Navigation menu */
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      font-weight: 600;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .footer-nav a {
+      color: #222;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .footer-nav a:hover {
+      color: var(--blue);
+    }
+
+        /* Social media icons */
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      font-size: 18px;
+      color: #444;
+      margin-bottom: 12px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .social-icons a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: var(--blue);
+    }
+
+    /* Bottom bar */
+    .bottom-bar {
+      background-color: var(--yellow);
+      color: var(--black);
+      text-align: center;
+      font-size: 12px;
+      padding: 10px 20px;
+      user-select: none;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+    }
+    </style>
+</head>
+<body>
+
+<div class="container-wrapper">
+    <div>
+        <h1 class="page-title">Staff & Guru</h1>
+        
+        <div class="staff-grid">
+            
+            <div class="profile-card">
+                <div class="image-container">
+                    <img 
+                        src="teacher1.jpg" 
+                        alt="Profile picture of Ms. Aisyah"
+                        class="profile-image"
+                    />
+                </div>
+                <div class="name-block">
+                    Siti Juleha, S.Ag
+                </div>
+                <div class="desc-block">
+                    <span class="label"><strong>Kepala Sekolah Bidang Kurikulum / pendidikan Agama Islam</strong>
+                </div>
+            </div>
+
+            <div class="profile-card">
+                <div class="image-container">
+                    <img 
+                        src="teacher2.jpg" 
+                        alt="Profile picture of Mr. Budi"
+                        class="profile-image"
+                    />
+                </div>
+                <div class="name-block">
+                    Suhandi, S.S
+                </div>
+                <div class="desc-block">
+                    <span class="label"><strong>Wakil Kepala Sekolah Bidang Sarana dan Prasarana / IPS</strong>
+                </div>
+            </div>
+
+            <div class="profile-card">
+                <div class="image-container">
+                    <img 
+                        src="teacher3.jpg" 
+                        alt="Profile picture of Ms. Citra"
+                        class="profile-image"
+                    />
+                </div>
+                <div class="name-block">
+                    Arina Israni, M.Pd
+                </div>
+                <div class="desc-block">
+                    <span class="label"><strong>Kepala Sekolah Bidang Humas / Bahasa Indonesia</strong>
+                </div>
+            </div>
+
+            <div class="profile-card">
+                <div class="image-container">
+                    <img 
+                        src="teacher4.jpg" 
+                        alt="Profile picture of Mr. Doni"
+                        class="profile-image"
+                    />
+                </div>
+                <div class="name-block">
+                    Aloysia Two Ratih Sukmawati, S.Si
+                </div>
+                <div class="desc-block">
+                    <span class="label"><strong>Wakil Kepala Sekolah Bidang Kesiswaan / IPS</strong>
+
+                </div>
+            </div>
+            
+            <div class="profile-card">
+                <div class="image-container">
+                    <img 
+                        src="teacher5.jpeg" 
+                        alt="Profile picture of Ms. Eka"
+                        class="profile-image"
+                    />
+                </div>
+                <div class="name-block">
+                    Dyah Ayu Priatin, S.Pd
+                </div>
+                <div class="desc-block">
+                    <span class="label"><strong>Bimbingan dan Konseling</strong>
+
+                </div>
+            </div>
+            
+            <div class="profile-card">
+                <div class="image-container">
+                    <img 
+                        src="teacher6.JPG" 
+                        alt="Profile picture of Mr. Fajar"
+                        class="profile-image"
+                    />
+                </div>
+                <div class="name-block">
+                    Sarmaria Tambunan, S.Pd
+                </div>
+                <div class="desc-block">
+                    <span class="label"><strong>Prakarya</strong>
+
+                </div>
+            </div>
+
+            <div class="profile-card">
+                <div class="image-container">
+                    <img 
+                        src="teacher7.JPG " 
+                        alt="Profile picture of Ms. Gita"
+                        class="profile-image"
+                    />
+                </div>
+                <div class="name-block">
+                    Karsoma, S.Pd
+                </div>
+                <div class="desc-block">
+                    <span class="label"><strong>Pendidikan Jasmani, Olahraga, dan Kesehatan</strong>
+
+                </div>
+            </div>
+
+            <div class="profile-card">
+                <div class="image-container">
+                    <img 
+                        src="teacher8.jpg" 
+                        alt="Profile picture of Mr. Hadi"
+                        class="profile-image"
+                    />
+                </div>
+                <div class="name-block">
+                    Eros Roswati, S.Pd
+                </div>
+                <div class="desc-block">
+                    <span class="label"><strong>Bahasa Indonesia</strong>>
+
+                </div>
+            </div>
+
+            <div class="profile-card">
+                <div class="image-container">
+                    <img 
+                        src="teacher9.JPG" 
+                        alt="Profile picture of Ms. Indah"
+                        class="profile-image"
+                    />
+                </div>
+                <div class="name-block">
+                    Esterlina Pangaribuan, S.Pd
+                </div>
+                <div class="desc-block">
+                    <span class="label"><strong>Bahasa Inggris</strong>
+
+                </div>
+            </div>
+
+            <div class="profile-card">
+                <div class="image-container">
+                    <img 
+                        src="teacher10.JPG" 
+                        alt="Profile picture of Mr. Jaka"
+                        class="profile-image"
+                    />
+                </div>
+                <div class="name-block">
+                    Yusuf Nur Rahman, S.Pd
+                </div>
+                <div class="desc-block">
+                    <span class="label"><strong>Bahasa Indonesia</strong>
+
+                </div>
+            </div>
+
+            <div class="profile-card">
+                <div class="image-container">
+                    <img 
+                        src="teacher11.jpg" 
+                        alt="Profile picture of Ms. Kiki"
+                        class="profile-image"
+                    />
+                </div>
+                <div class="name-block">
+                    Yeni Ari Wulandari, S.Pd
+                </div>
+                <div class="desc-block">
+                    <span class="label"><strong>Bahasa Inggris</strong>
+
+                </div>
+            </div>
+            
+            <div class="profile-card">
+                <div class="image-container">
+                    <img 
+                        src="teacher12.JPG" 
+                        alt="Profile picture of Mr. Luthfi"
+                        class="profile-image"
+                    />
+                </div>
+                <div class="name-block">
+                    Novi Juliyanti, M.Pd
+                </div>
+                <div class="desc-block">
+                    <span class="label"><strong>Ilmu Pengetahuan Alam</strong>
+
+                </div>
+            </div>
+            
+            <div class="profile-card">
+                <div class="image-container">
+                    <img 
+                        src="teacher13.JPG" 
+                        alt="Profile picture of Ms. Maya"
+                        class="profile-image"
+                    />
+                </div>
+                <div class="name-block">
+                    Sri Pamungkas, S.Pd
+                </div>
+                <div class="desc-block">
+                    <span class="label"><strong>Pendidikan Pancasila</strong>
+
+                </div>
+            </div>
+            
+            <div class="profile-card">
+                <div class="image-container">
+                    <img 
+                        src="teacher14.JPG" 
+                        alt="Profile picture of Mr. Nanda"
+                        class="profile-image"
+                    />
+                </div>
+                <div class="name-block">
+                    Morina Shelvia Sony, S.Pd
+                </div>
+                <div class="desc-block">
+                    <span class="label"><strong>Ilmu Pengetahuan Alam / Seni Budaya</strong>
+
+                </div>
+            </div>
+            
+            <div class="profile-card">
+                <div class="image-container">
+                    <img 
+                        src="teacher15.jpg" 
+                        alt="Profile picture of Ms. Olga"
+                        class="profile-image"
+                    />
+                </div>
+                <div class="name-block">
+                    Kasmirah, S.Pd
+                </div>
+                <div class="desc-block">
+                    <span class="label"><strong>Ilmu Pengetahuan Sosial</strong>
+
+                </div>
+            </div>
+            
+            <div class="profile-card">
+                <div class="image-container">
+                    <img 
+                        src="teacher16.JPG" 
+                        alt="Profile picture of Mr. Panca"
+                        class="profile-image"
+                    />
+                </div>
+                <div class="name-block">
+                    Sudarsana, S.Pd
+                </div>
+                <div class="desc-block">
+                    <span class="label"><strong>Matematika</strong>
+
+                </div>
+            </div>
+            
+            <div class="profile-card">
+                <div class="image-container">
+                    <img 
+                        src="teacher17.jpg" 
+                        alt="Profile picture of Ms. Rina"
+                        class="profile-image"
+                    />
+                </div>
+                <div class="name-block">
+                    Siti Hamidah, S.Pd
+                </div>
+                <div class="desc-block">
+                    <span class="label"><strong>Prakarya</strong>
+
+                </div>
+            </div>
+            
+            <div class="profile-card">
+                <div class="image-container">
+                    <img 
+                        src="teacher18.JPG" 
+                        alt="Profile picture of Mr. Surya"
+                        class="profile-image"
+                    />
+                </div>
+                <div class="name-block">
+                    Widi Santoso, S.Pd
+                </div>
+                <div class="desc-block">
+                    <span class="label"><strong>Pembina Osis / Pendidikan Jasmani, Olahraga, dan Kesehatan</strong>
+
+                </div>
+            </div>
+            
+            <div class="profile-card">
+                <div class="image-container">
+                    <img 
+                        src="teacher19.jpg" 
+                        alt="Profile picture of Ms. Tika"
+                        class="profile-image"
+                    />
+                </div>
+                <div class="name-block">
+                    Hasan Basri, S.Kom
+                </div>
+                <div class="desc-block">
+                    <span class="label"><strong>Operator Sekolah</strong>
+
+                </div>
+            </div>
+            
+            <div class="profile-card">
+                <div class="image-container">
+                    <img 
+                        src="teacher20.JPG" 
+                        alt="Profile picture of Mr. Umar"
+                        class="profile-image"
+                    />
+                </div>
+                <div class="name-block">
+                    Debby Angela Melati Silitonga
+                </div>
+                <div class="desc-block">
+                    <span class="label"><strong>Tata Usaha bagian Umum</strong>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo" aria-label="Logo">SMPN 3 Pasarkemis</div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="visimisi.html">Visi & Misi</a>
+        <a href="sejarah.html">Sejarah</a>
+        <a href="eks.html">Ekstrakurikuler</a>
+        <a href="prestasi.html">Prestasi</a>
+        <a href="guru.html">Guru</a>
+      </nav>
+
+      <div class="social-icons" aria-label="Social media links">
+        <a href="https://www.instagram.com/smpn3.pasarkemis?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://maps.app.goo.gl/A2h3riYn5eTP9MYH8" target="_blank" aria-label="Location" title="Location"><i class="fas fa-map-marker-alt"></i></a>
+        <a href="mailto:smpn3.pasarkemis70@gmail.com" aria-label="Email" title="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <div class="bottom-bar" aria-label="Footer copyright">
+      SMPN 3 Pasarkemis - 2025
+    </div>
+  </footer>
+</body>
+</html>

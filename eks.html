@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streamline Your Workflow</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <style>
+    /* Base resets and fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&family=Segoe+UI&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #F8F7F4;
+      color: #000;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+    }
+
+    /* COLOR VARIABLES */
+    :root {
+      --blue: #1a60d6;
+      --dark-blue: #0d3bb3;
+      --yellow: #f7d503;
+      --purple: #5e3bff;
+      --black: #000;
+      --white: #F8F7F4;
+      --red: #b7282b;
+      --light-gray: #f9f9f9;
+      --gray-text: #666;
+    }
+
+    /* HEADER */
+    header {
+      background: var(--white);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 32px;
+      border-bottom: 1px solid #eee;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      font-size: 14px;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logosmp {
+      background: var(--white);
+      height: 70px;
+    }
+
+    .logo-text {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 20px;
+      color: var(--black);
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      font-weight: 600;
+    }
+
+    nav a {
+      padding: 8px 16px;
+      border-radius: 16px;
+      color: var(--black);
+      transition: background-color 0.3s, color 0.3s;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+    }
+
+    nav a.active,
+    nav a:hover {
+      background-color: var(--black);
+      color: var(--white);
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo-container">
+      <img class="logosmp" src="logosmp.png">
+      <a href="index.html" class="logo-text">SMPN 3 Pasarkemis</a>
+    </div>
+    <nav>
+      <a href="visimisi.html">Visi & Misi</a>
+      <a href="sejarah.html">Sejarah</a>
+      <a href="eks.html">Ekstrakurikuler</a>
+      <a href="prestasi.html">Prestasi</a>
+      <a href="guru.html">Guru</a>
+    </nav>
+  </header>
+    <style>
+            /* Base resets and fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&family=Segoe+UI&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+        /* --- CSS Variables --- */
+        :root {
+            --color-text-dark: #333333;
+            --color-text-light: #666666;
+            --color-background: #F8F7F4; /* Light off-white background */
+            --color-button: #000000;
+            --color-button-text: #FFFFFF;
+            --font-serif: 'Times New Roman', serif; /* Simulating the elegant serif font */
+            --font-sans: 'Inter', sans-serif;
+        }
+
+        /* --- Base & Typography --- */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--color-background);
+            color: var(--color-text-dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        /* --- Header Section --- */
+        .header-section {
+            padding: 8rem 0 4rem 0;
+        }
+
+        .title-group {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .main-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin: 0;
+            color: var(--color-text-dark);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .subtitle {
+            font-size: 5rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-top: 0.5rem;
+            color: var(--color-text-dark);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .description {
+            max-width: 500px;
+            margin: 1.5rem auto 2.5rem auto;
+            font-size: 1.1rem;
+            color: var(--color-text-light);
+            line-height: 1.5;
+        }
+
+        /* --- Call to Action Button --- */
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--color-button);
+            color: var(--color-button-text);
+            padding: 0.75rem 2rem;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 9999px; /* Pill shape */
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 5rem;
+        }
+
+        .cta-button:hover {
+            background-color: #222222;
+            transform: translateY(-2px);
+        }
+        
+        /* --- Team Perspective Carousel --- */
+        .team-carousel-wrapper {
+            /* This div helps contain the perspective and overflow */
+            overflow: hidden; 
+            padding-bottom: 100px; /* Space for the bottom shadow/curve */
+            position: relative;
+        }
+
+        .team-carousel {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            transform-style: preserve-3d;
+            perspective: 1000px; /* Defines the depth of the 3D space */
+            
+            /* Apply the perspective skew effect */
+            transform: perspective(1000px) rotateX(10deg);
+            margin: 0 -20vw; /* Pull outside the container to fill edges */
+            max-width: none;
+        }
+
+        /* Team member image "window" */
+        .team-member {
+            flex: 0 0 150px; /* Fixed width for the image box */
+            height: 220px;
+            background-color: var(--color-background);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+            position: relative;
+            transform: scale(1); /* Base scale */
+        }
+        
+        .team-member:hover {
+            transform: scale(1.05) translateY(-5px); /* Lift on hover */
+        }
+
+        .team-member img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        /* Gradient Overlay effect to blend edges */
+        .team-carousel::before,
+        .team-carousel::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 30vw;
+            height: 100%;
+            pointer-events: none;
+            z-index: 20;
+        }
+        
+        /* Fade effect on the left side */
+        .team-carousel::before {
+            left: 0;
+            background: linear-gradient(to right, rgba(248, 247, 244, 1) 0%, rgba(248, 247, 244, 0) 100%);
+        }
+        
+        /* Fade effect on the right side */
+        .team-carousel::after {
+            right: 0;
+            background: linear-gradient(to left, rgba(248, 247, 244, 1) 0%, rgba(248, 247, 244, 0) 100%);
+        }
+
+        /* --- Feature Grid --- */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 40px;
+            padding: 4rem 0 8rem 0;
+        }
+
+        @media (min-width: 768px) {
+            .feature-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .feature-item {
+            text-align: center;
+            position: relative;
+        }
+
+        .feature-item h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--color-text-dark);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .feature-item p {
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+            max-width: 300px;
+            margin: 0 auto;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Center the second feature item on the page */
+        .feature-grid .feature-item:nth-child(2) {
+            grid-column: 1 / -1;
+        }
+
+        /* Responsive Title Adjustments */
+        @media (max-width: 900px) {
+            .main-title {
+                font-size: 3rem;
+            }
+            .subtitle {
+                font-size: 4rem;
+            }
+        }
+        @media (max-width: 600px) {
+            .header-section {
+                padding: 4rem 0 2rem 0;
+            }
+            .main-title {
+                font-size: 2rem;
+            }
+            .subtitle {
+                font-size: 2.8rem;
+            }
+            .description {
+                font-size: 1rem;
+            }
+            .team-member {
+                flex: 0 0 100px;
+                height: 160px;
+            }
+        }
+        .tek{
+            text-align: center;
+            flex: auto;
+            font-family: 'Poppins', sans-serif;
+        }
+            /* Footer bar */
+    footer {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+
+    .footer-content {
+      text-align: center;
+      padding: 36px 20px 24px;
+      background-color: #F8F7F4;
+      color: #222;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .footer-logo {
+      font-weight: 700;
+      font-size: 32px;
+      color: var(--blue);
+      margin-bottom: 18px;
+      letter-spacing: 1px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Navigation menu */
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      font-weight: 600;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .footer-nav a {
+      color: #222;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .footer-nav a:hover {
+      color: var(--blue);
+    }
+
+    /* Social media icons */
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      font-size: 18px;
+      color: #444;
+      margin-bottom: 12px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .social-icons a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: var(--blue);
+    }
+
+    /* Bottom bar */
+    .bottom-bar {
+      background-color: var(--yellow);
+      color: var(--black);
+      text-align: center;
+      font-size: 12px;
+      padding: 10px 20px;
+      user-select: none;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+    }
+    </style>
+</head>
+<body>
+    <section class="header-section">
+        <div class="container">
+            <div class="title-group">
+                <h1 class="main-title">SMPN 3 Pasarkemis</h1>
+                <h2 class="subtitle">EKSTRAKULIKULER</h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- Team Member Perspective Carousel --- -->
+    <div class="team-carousel-wrapper">
+        <div class="team-carousel">
+            <!-- Team Member 1 -->
+            <div class="team-member">
+                <img
+                    src="eks1.jpg"
+                    alt="Team member 1"
+                    onerror="this.onerror=null; this.src='https://placehold.co/150x220/8b5cf6/ffffff?text=U1';"
+                >
+            </div>
+            <!-- Team Member 2 -->
+            <div class="team-member">
+                <img 
+                    src="eks2.jpg" 
+                    alt="Team member 2"
+                    onerror="this.onerror=null; this.src='https://placehold.co/150x220/3b82f6/ffffff?text=U2';"
+                >
+            </div>
+            <!-- Team Member 3 -->
+            <div class="team-member">
+                <img 
+                    src="eks3.jpg" 
+                    alt="Team member 3"
+                    onerror="this.onerror=null; this.src='https://placehold.co/150x220/f97316/ffffff?text=U3';"
+                >
+            </div>
+            <!-- Team Member 4 -->
+            <div class="team-member">
+                <img 
+                    src="eks4.png" 
+                    alt="Team member 4"
+                    onerror="this.onerror=null; this.src='https://placehold.co/150x220/10b981/ffffff?text=U4';"
+                >
+            </div>
+            <!-- Team Member 5 -->
+            <div class="team-member">
+                <img 
+                    src="eks5.jpg" 
+                    alt="Team member 5"
+                    onerror="this.onerror=null; this.src='https://placehold.co/150x220/ec4899/ffffff?text=U5';"
+                >
+            </div>
+            <!-- Team Member 6 -->
+            <div class="team-member">
+                <img 
+                    src="eks6.jpg" 
+                    alt="Team member 6"
+                    onerror="this.onerror=null; this.src='https://placehold.co/150x220/7c3aed/ffffff?text=U6';"
+                >
+            </div>
+            <!-- Team Member 7 -->
+            <div class="team-member">
+                <img 
+                    src="eks7.jpg" 
+                    alt="Team member 7"
+                    onerror="this.onerror=null; this.src='https://placehold.co/150x220/ef4444/ffffff?text=U7';"
+                >
+            </div>
+        </div>
+        <br>
+        <br>
+        <p class="tek"><strong>English Club - Paskribaka - Seni Tari - Pramuka - Futsal - Palang Merah - Rohis</strong></p>
+        <br>
+        <section class="feature-section">
+        <div class="container">
+            <div class="title-group">
+                <div class="feature-item">
+                    <h3>Ekskul</h3>
+                    <p>
+                        Ekskul membantu siswa mengembangkan minat, bakat, dan karakter di luar kegiatan belajar.
+            </div>
+        </div>
+    </section>
+    </div>
+<footer>
+    <div class="footer-content">
+      <div class="footer-logo" aria-label="Logo">SMPN 3 Pasarkemis</div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="visimisi.html">Visi & Misi</a>
+        <a href="sejarah.html">Sejarah</a>
+        <a href="eks.html">Ekstrakurikuler</a>
+        <a href="prestasi.html">Prestasi</a>
+        <a href="guru.html">Guru</a>
+      </nav>
+
+      <div class="social-icons" aria-label="Social media links">
+        <a href="https://www.instagram.com/smpn3.pasarkemis?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://maps.app.goo.gl/A2h3riYn5eTP9MYH8" target="_blank" aria-label="Location" title="Location"><i class="fas fa-map-marker-alt"></i></a>
+        <a href="mailto:smpn3.pasarkemis70@gmail.com" aria-label="Email" title="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <div class="bottom-bar" aria-label="Footer copyright">
+      SMPN 3 Pasarkemis - 2025
+    </div>
+  </footer>
+</body>
+</html>

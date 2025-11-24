@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sejarah - SMPN 3 Pasarkemis</title>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    /* Base resets and fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&family=Segoe+UI&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #F8F7F4;
+      color: #000;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+    }
+
+    /* COLOR VARIABLES */
+    :root {
+      --blue: #1a60d6;
+      --dark-blue: #0d3bb3;
+      --yellow: #f7d503;
+      --purple: #5e3bff;
+      --black: #000;
+      --white: #F8F7F4;
+      --red: #b7282b;
+      --light-gray: #f9f9f9;
+      --gray-text: #666;
+    }
+
+    /* HEADER */
+    header {
+      background: var(--white);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 32px;
+      border-bottom: 1px solid #eee;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      font-size: 14px;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logosmp {
+      background: var(--white);
+      height: 70px;
+    }
+
+    .logo-text {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 20px;
+      color: var(--black);
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      font-weight: 600;
+    }
+
+    nav a {
+      padding: 8px 16px;
+      border-radius: 16px;
+      color: var(--black);
+      transition: background-color 0.3s, color 0.3s;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+    }
+
+    nav a.active,
+    nav a:hover {
+      background-color: var(--black);
+      color: var(--white);
+    }
+
+    /* Footer bar */
+    footer {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+
+    .footer-content {
+      text-align: center;
+      padding: 36px 20px 24px;
+      background-color: #F8F7F4;
+      color: #222;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .footer-logo {
+      font-weight: 700;
+      font-size: 32px;
+      color: var(--blue);
+      margin-bottom: 18px;
+      letter-spacing: 1px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Navigation menu */
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      font-weight: 600;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .footer-nav a {
+      color: #222;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .footer-nav a:hover {
+      color: var(--blue);
+    }
+
+    /* Social media icons */
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      font-size: 18px;
+      color: #444;
+      margin-bottom: 12px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .social-icons a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: var(--blue);
+    }
+
+    /* Bottom bar */
+    .bottom-bar {
+      background-color: var(--yellow);
+      color: var(--black);
+      text-align: center;
+      font-size: 12px;
+      padding: 10px 20px;
+      user-select: none;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .footer-nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo-container">
+      <img class="logosmp" src="logosmp.png">
+      <a href="index.html" class="logo-text">SMPN 3 Pasarkemis</a>
+    </div>
+    <nav>
+      <a href="visimisi.html">Visi & Misi</a>
+      <a href="sejarah.html" class="active">Sejarah</a>
+      <a href="eks.html">Ekstrakurikuler</a>
+      <a href="prestasi.html">Prestasi</a>
+      <a href="guru.html">Guru</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main style="padding: 2rem; text-align: center; color: white; min-height: 650px; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('home1.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <h1>Sejarah SMPN 3 Pasarkemis</h1>
+    <p>SMP Negeri 3 Pasar Kemis merupakan salah satu lembaga pendidikan menengah pertama negeri yang berada di Kecamatan Pasar Kemis, Kabupaten Tangerang, Provinsi Banten. Kehadiran sekolah ini berawal dari kebutuhan masyarakat akan sarana pendidikan yang memadai, terutama seiring dengan meningkatnya jumlah penduduk dan berkembangnya wilayah Pasar Kemis sebagai kawasan pemukiman dan pusat pertumbuhan baru.
+    <br>
+    <br>Untuk menjawab kebutuhan tersebut, pemerintah akhirnya mendirikan SMP Negeri 3 Pasar Kemis berdasarkan Surat Keputusan Menteri Pendidikan dan Kebudayaan Nomor 421/Kep.246-Huk/2005 tertanggal 1 Agustus 2005. Setelah proses pendirian dan persiapan yang dilakukan secara bertahap, sekolah ini resmi mulai beroperasi pada 20 Agustus 2005, menandai awal perjalanan panjangnya dalam dunia pendidikan.
+    <br>
+    <br>Sejak awal berdirinya, SMP Negeri 3 Pasar Kemis berkomitmen menjadi sekolah yang mampu memberikan layanan pendidikan terbaik bagi seluruh peserta didik. Dalam perjalanannya, sekolah ini terus membenahi sarana dan prasarana, meningkatkan kompetensi tenaga pendidik, serta memperluas program-program pembelajaran agar mampu mengikuti perkembangan zaman.
+    <br>
+    <br>Upaya tersebut membuahkan hasil ketika SMP Negeri 3 Pasar Kemis berhasil meraih akreditasi A berdasarkan Surat Keputusan Badan Akreditasi Nasional Sekolah/Madrasah Nomor 100/BAP-S/M-SK/XI/2016 tertanggal 26 November 2016. Pencapaian ini menjadi bukti bahwa sekolah telah memenuhi standar mutu pendidikan nasional dan mampu menyelenggarakan pembelajaran yang berkualitas.
+    <br>
+    <br>Hingga saat ini, SMP Negeri 3 Pasar Kemis terus berkembang sebagai institusi pendidikan yang unggul. Dengan dukungan seluruh warga sekolah—guru, tenaga kependidikan, siswa, serta masyarakat sekitar—sekolah ini terus berbenah untuk menciptakan lingkungan belajar yang nyaman, inspiratif, dan mampu melahirkan generasi muda yang berprestasi, berkarakter, dan siap bersaing di masa depan.</p>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo" aria-label="Logo">SMPN 3 Pasarkemis</div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="visimisi.html">Visi & Misi</a>
+        <a href="sejarah.html">Sejarah</a>
+        <a href="eks.html">Ekstrakurikuler</a>
+        <a href="prestasi.html">Prestasi</a>
+        <a href="guru.html">Guru</a>
+      </nav>
+
+      <div class="social-icons" aria-label="Social media links">
+        <a href="https://www.instagram.com/smpn3.pasarkemis?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://maps.app.goo.gl/A2h3riYn5eTP9MYH8" target="_blank" aria-label="Location" title="Location"><i class="fas fa-map-marker-alt"></i></a>
+        <a href="mailto:smpn3.pasarkemis70@gmail.com" aria-label="Email" title="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <div class="bottom-bar" aria-label="Footer copyright">
+      SMPN 3 Pasarkemis - 2025
+    </div>
+  </footer>
+</body>
+</html>
